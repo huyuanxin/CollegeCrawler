@@ -34,6 +34,9 @@ public class CrawlerUtil {
     final MinScoreService minScoreService;
     final MinScoreOrderService minScoreOrderService;
 
+    int finished;
+    int needed;
+
     @Autowired
     public CrawlerUtil(EnrollNumService enrollNumService, MinScoreService minScoreService, MinScoreOrderService minScoreOrderService) {
         this.enrollNumService = enrollNumService;
@@ -51,7 +54,8 @@ public class CrawlerUtil {
             System.out.println("已爬取" + it.getCollegeName() + "的信息,跳过");
             allCollegeNameList.removeIf(it.getCollegeName()::equals);
         });
-        System.out.println("爬取状态:  " + minScoreList.size() + "/" + (allCollegeNameList.size() + minScoreList.size()));
+        finished = minScoreList.size();
+        needed = allCollegeNameList.size() + minScoreList.size();
         return allCollegeNameList;
     }
 
@@ -62,6 +66,7 @@ public class CrawlerUtil {
         List<EnrollNum> enrollNumList = new ArrayList<>();
         for (String collegeName : collegeNameList
         ) {
+            System.out.println("爬取状态:  " + finished + "/" + needed);
             System.out.println("开始爬取" + collegeName + "的分数线、最低排位和招生人数");
             for (Province province : Province.values()
             ) {
@@ -114,6 +119,7 @@ public class CrawlerUtil {
             enrollNumList.clear();
             minScoreList.clear();
             minScoreOrderList.clear();
+            finished++;
             System.out.println(collegeName + "的分数线、最低排位和招生人数爬取完成");
         }
     }
