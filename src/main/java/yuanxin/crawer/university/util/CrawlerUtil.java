@@ -54,11 +54,6 @@ public class CrawlerUtil {
                 ) {
                     for (Curriculum curriculum : Curriculum.values()
                     ) {
-                        try {
-                            Thread.sleep(0);
-                        } catch (Exception e) {
-                            continue;
-                        }
                         JSONObject jsonObject = CollageInfoCrawlerUtil.getCollageInfoJson(collegeName, province.getName(), curriculum.getName(), batch.getName());
                         HashMap<String, JSONArray> minScoreMap = CollageInfoCrawlerUtil.getCollageInfoMap(jsonObject, "minScore");
                         for (String key : minScoreMap.keySet()) {
@@ -107,4 +102,5 @@ public class CrawlerUtil {
             System.out.println(collegeName + "的分数线、最低排位和招生人数爬取完成");
         }
     }
+
 }
