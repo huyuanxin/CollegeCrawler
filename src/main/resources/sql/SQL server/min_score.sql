@@ -12,7 +12,7 @@
  Target Server Version : 10501600
  File Encoding         : 65001
 
- Date: 19/03/2021 11:34:21
+ Date: 19/03/2021 13:14:12
 */
 
 
@@ -24,7 +24,7 @@ IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[mi
 GO
 
 CREATE TABLE [dbo].[min_score] (
-  [id] bigint NOT NULL,
+  [id] bigint identity(1,1) NOT NULL,
   [college_name] nvarchar(255) COLLATE Chinese_PRC_CI_AS  NULL,
   [score] nvarchar(255) COLLATE Chinese_PRC_CI_AS  NULL,
   [year] nvarchar(255) COLLATE Chinese_PRC_CI_AS  NULL,
@@ -42,7 +42,7 @@ GO
 -- ----------------------------
 -- Primary Key structure for table min_score
 -- ----------------------------
-ALTER TABLE [dbo].[min_score] ADD CONSTRAINT [PK__min_scor__3213E83F0ABD916C] PRIMARY KEY CLUSTERED ([id])
+ALTER TABLE [dbo].[min_score] ADD CONSTRAINT [PK__min_scor__3213E83F2E06CDA9] PRIMARY KEY CLUSTERED ([id])
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
 ON [PRIMARY]
 GO

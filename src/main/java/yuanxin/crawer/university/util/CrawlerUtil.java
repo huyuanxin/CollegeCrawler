@@ -101,9 +101,9 @@ public class CrawlerUtil {
                     }
                 }
             }
-            enrollNumService.saveOrUpdateBatch(enrollNumList.stream().filter(it -> !"--".equals(it.getNum())).collect(Collectors.toList()));
-            minScoreService.saveOrUpdateBatch(minScoreList.stream().filter(it -> !"--".equals(it.getScore())).collect(Collectors.toList()));
-            minScoreOrderService.saveOrUpdateBatch(minScoreOrderList.stream().filter(it -> !"--".equals(it.getRank())).collect(Collectors.toList()));
+            enrollNumService.saveBatch(enrollNumList.stream().filter(it -> !"--".equals(it.getNum())).collect(Collectors.toList()));
+            minScoreService.saveBatch(minScoreList.stream().filter(it -> !"--".equals(it.getScore())).collect(Collectors.toList()));
+            minScoreOrderService.saveBatch(minScoreOrderList.stream().filter(it -> !"--".equals(it.getRank())).collect(Collectors.toList()));
             enrollNumList.clear();
             minScoreList.clear();
             minScoreOrderList.clear();

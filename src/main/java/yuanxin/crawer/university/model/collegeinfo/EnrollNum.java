@@ -1,7 +1,6 @@
 package yuanxin.crawer.university.model.collegeinfo;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
@@ -9,11 +8,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
  */
 @TableName("enrollnum")
 public class EnrollNum {
-    /**
-     * id
-     */
-    @TableId("id")
-    Long id;
 
     /**
      * 大学名称
@@ -65,25 +59,6 @@ public class EnrollNum {
         this.curriculum = curriculum;
         this.batch = batch;
         this.type = type;
-    }
-
-    public EnrollNum(Long id, String collegeName, String num, String year, String province, String curriculum, String batch, String type) {
-        this.id = id;
-        this.collegeName = collegeName;
-        this.num = num;
-        this.year = year;
-        this.province = province;
-        this.curriculum = curriculum;
-        this.batch = batch;
-        this.type = type;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getCollegeName() {
