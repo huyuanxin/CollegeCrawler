@@ -9,7 +9,9 @@ import yuanxin.crawer.university.util.CollageInfoCrawlerUtil;
 import yuanxin.crawer.university.util.CollegeNameCrawlerUtil;
 import yuanxin.crawer.university.util.CrawlerUtil;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 @SpringBootTest
@@ -48,4 +50,18 @@ class UniversityCrawlerApplicationTests {
         crawlerUtil.saveCollegeInfo();
     }
 
+    @Test
+    void est() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        Iterator<String> iterator = list.iterator();
+        for (String item : list) {
+            if ("2".equals(item)) {
+                list.remove(item);
+            }
+        }
+
+        list.forEach(System.out::println);
+    }
 }

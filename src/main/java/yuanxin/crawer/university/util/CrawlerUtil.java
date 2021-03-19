@@ -38,11 +38,10 @@ public class CrawlerUtil {
         this.enrollNumService = enrollNumService;
         this.minScoreService = minScoreService;
         this.minScoreOrderService = minScoreOrderService;
-        collegeNameList = CollegeNameCrawlerUtil.getAllCollegeNameList();
     }
 
     public void saveCollegeInfo() {
-
+        collegeNameList = CollegeNameCrawlerUtil.getAllCollegeNameList();
         HashMap<String, Object> map = new HashMap<>(3);
         List<MinScore> minScoreList = new ArrayList<>();
         List<MinScoreOrder> minScoreOrderList = new ArrayList<>();
@@ -71,7 +70,7 @@ public class CrawlerUtil {
                                 JSONObject temp = (JSONObject) o;
                                 String minScore = temp.getString("value");
                                 String type = temp.getString("name");
-                                minScoreList.add(new MinScore(0L,collegeName, minScore, key, province.getName(), curriculum.getName(), batch.getName(), type));
+                                minScoreList.add(new MinScore(0L, collegeName, minScore, key, province.getName(), curriculum.getName(), batch.getName(), type));
                             }
                         }
 
@@ -84,7 +83,7 @@ public class CrawlerUtil {
                                 JSONObject temp = (JSONObject) o;
                                 String rank = temp.getString("value");
                                 String type = temp.getString("name");
-                                minScoreOrderList.add(new MinScoreOrder(0L,collegeName, rank, key, province.getName(), curriculum.getName(), batch.getName(), type));
+                                minScoreOrderList.add(new MinScoreOrder(0L, collegeName, rank, key, province.getName(), curriculum.getName(), batch.getName(), type));
                             }
                         }
 
@@ -97,7 +96,7 @@ public class CrawlerUtil {
                                 JSONObject temp = (JSONObject) o;
                                 String num = temp.getString("value");
                                 String type = temp.getString("name");
-                                enrollNumList.add(new EnrollNum(0L,collegeName, num, key, province.getName(), curriculum.getName(), batch.getName(), type));
+                                enrollNumList.add(new EnrollNum(0L, collegeName, num, key, province.getName(), curriculum.getName(), batch.getName(), type));
                             }
                         }
                     }
@@ -106,6 +105,9 @@ public class CrawlerUtil {
             enrollNumService.saveOrUpdateBatch(enrollNumList.stream().filter(it -> !"--".equals(it.getNum())).collect(Collectors.toList()));
             minScoreService.saveOrUpdateBatch(minScoreList.stream().filter(it -> !"--".equals(it.getScore())).collect(Collectors.toList()));
             minScoreOrderService.saveOrUpdateBatch(minScoreOrderList.stream().filter(it -> !"--".equals(it.getRank())).collect(Collectors.toList()));
+            enrollNumList.clear();
+            minScoreList.clear();
+            minScoreOrderList.clear();
             System.out.println(collegeName + "的分数线、最低排位和招生人数爬取完成");
         }
 
