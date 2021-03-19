@@ -42,7 +42,6 @@ public class CrawlerUtil {
 
     public void saveCollegeInfo() {
         collegeNameList = CollegeNameCrawlerUtil.getAllCollegeNameList();
-        HashMap<String, Object> map = new HashMap<>(3);
         List<MinScore> minScoreList = new ArrayList<>();
         List<MinScoreOrder> minScoreOrderList = new ArrayList<>();
         List<EnrollNum> enrollNumList = new ArrayList<>();
