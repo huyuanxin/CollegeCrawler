@@ -22,7 +22,7 @@ public class CollegeNameCrawlerUtil {
     /**
      * 总页数
      */
-    final static int TOTAL_PAGE = 20;
+    final static int TOTAL_PAGE = 21;
 
     /**
      * 模拟浏览器请求 URL

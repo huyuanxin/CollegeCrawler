@@ -28,7 +28,12 @@ public class CollageInfoCrawlerUtil {
         try {
             return JSONObject.parseObject(jsonString);
         } catch (Exception e) {
-            e.printStackTrace();
+            try {
+                String retry = HttpUtil.createGet(requestUrl).header(Header.USER_AGENT, "Mozilla/5.0").execute().body();
+                return JSONObject.parseObject(retry);
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
         }
         return new JSONObject();
     }
