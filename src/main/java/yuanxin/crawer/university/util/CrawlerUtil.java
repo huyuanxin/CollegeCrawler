@@ -69,7 +69,7 @@ public class CrawlerUtil {
                                 JSONObject temp = (JSONObject) o;
                                 String minScore = temp.getString("value");
                                 String type = temp.getString("name");
-                                minScoreList.add(new MinScore(0L, collegeName, minScore, key, province.getName(), curriculum.getName(), batch.getName(), type));
+                                minScoreList.add(new MinScore(collegeName, minScore, key, province.getName(), curriculum.getName(), batch.getName(), type));
                             }
                         }
 
@@ -82,7 +82,7 @@ public class CrawlerUtil {
                                 JSONObject temp = (JSONObject) o;
                                 String rank = temp.getString("value");
                                 String type = temp.getString("name");
-                                minScoreOrderList.add(new MinScoreOrder(0L, collegeName, rank, key, province.getName(), curriculum.getName(), batch.getName(), type));
+                                minScoreOrderList.add(new MinScoreOrder(collegeName, rank, key, province.getName(), curriculum.getName(), batch.getName(), type));
                             }
                         }
 
@@ -95,7 +95,7 @@ public class CrawlerUtil {
                                 JSONObject temp = (JSONObject) o;
                                 String num = temp.getString("value");
                                 String type = temp.getString("name");
-                                enrollNumList.add(new EnrollNum(0L, collegeName, num, key, province.getName(), curriculum.getName(), batch.getName(), type));
+                                enrollNumList.add(new EnrollNum(collegeName, num, key, province.getName(), curriculum.getName(), batch.getName(), type));
                             }
                         }
                     }
