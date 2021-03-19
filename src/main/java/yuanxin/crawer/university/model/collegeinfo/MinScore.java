@@ -61,6 +61,10 @@ public class MinScore {
         this.type = type;
     }
 
+    public MinScore(String collegeName) {
+        this.collegeName = collegeName;
+    }
+
     public String getCollegeName() {
         return collegeName;
     }

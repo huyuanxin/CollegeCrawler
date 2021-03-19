@@ -2,6 +2,7 @@ package yuanxin.crawer.university.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import yuanxin.crawer.university.model.collegeinfo.EnrollNum;
@@ -40,8 +41,22 @@ public class CrawlerUtil {
         this.minScoreOrderService = minScoreOrderService;
     }
 
+    public List<String> getCollegeNameListNoInDataBaseName() {
+        List<String> allCollegeNameList = CollegeNameCrawlerUtil.getAllCollegeNameList();
+        System.out.println(allCollegeNameList.size());
+        QueryWrapper<MinScore> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("DISTINCT college_name");
+        List<MinScore> minScoreList = minScoreService.list(queryWrapper);
+        minScoreList.forEach(it -> {
+            System.out.println("已爬取" + it.getCollegeName() + "的信息,跳过");
+            allCollegeNameList.removeIf(it.getCollegeName()::equals);
+        });
+        System.out.println("爬取状态:  " + minScoreList.size() + "/" + (allCollegeNameList.size() + minScoreList.size()));
+        return allCollegeNameList;
+    }
+
     public void saveCollegeInfo() {
-        collegeNameList = CollegeNameCrawlerUtil.getAllCollegeNameList();
+        collegeNameList = getCollegeNameListNoInDataBaseName();
         List<MinScore> minScoreList = new ArrayList<>();
         List<MinScoreOrder> minScoreOrderList = new ArrayList<>();
         List<EnrollNum> enrollNumList = new ArrayList<>();
