@@ -59,7 +59,6 @@ public class CrawlerUtil {
                         } catch (Exception e) {
                             continue;
                         }
-                        System.out.println("开始爬取" + collegeName + "," + province.getName() + curriculum.getName() + batch.getName() + "分数线");
                         JSONObject jsonObject = CollageInfoCrawlerUtil.getCollageInfoJson(collegeName, province.getName(), curriculum.getName(), batch.getName());
                         HashMap<String, JSONArray> minScoreMap = CollageInfoCrawlerUtil.getCollageInfoMap(jsonObject, "minScore");
                         for (String key : minScoreMap.keySet()) {
@@ -73,7 +72,6 @@ public class CrawlerUtil {
                             }
                         }
 
-                        System.out.println("开始爬取" + collegeName + "," + province.getName() + curriculum.getName() + batch.getName() + "最低排位");
                         HashMap<String, JSONArray> minScoreOrderMap = CollageInfoCrawlerUtil.getCollageInfoMap(jsonObject, "minScoreOrder");
                         for (String key : minScoreOrderMap.keySet()) {
                             JSONArray jsonArray = minScoreOrderMap.get(key);
@@ -86,7 +84,6 @@ public class CrawlerUtil {
                             }
                         }
 
-                        System.out.println("开始爬取" + collegeName + "," + province.getName() + curriculum.getName() + batch.getName() + "招生人数");
                         HashMap<String, JSONArray> enrollNumMap = CollageInfoCrawlerUtil.getCollageInfoMap(jsonObject, "enrollNum");
                         for (String key : enrollNumMap.keySet()) {
                             JSONArray jsonArray = enrollNumMap.get(key);
@@ -109,7 +106,5 @@ public class CrawlerUtil {
             minScoreOrderList.clear();
             System.out.println(collegeName + "的分数线、最低排位和招生人数爬取完成");
         }
-
-
     }
 }
