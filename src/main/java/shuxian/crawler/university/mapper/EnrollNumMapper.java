@@ -7,6 +7,7 @@ import shuxian.crawler.university.model.collegeinfo.EnrollNum;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @Mapper
 @Repository

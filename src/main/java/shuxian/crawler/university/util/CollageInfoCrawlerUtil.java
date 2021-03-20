@@ -9,6 +9,7 @@ import java.util.HashMap;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 public class CollageInfoCrawlerUtil {
 

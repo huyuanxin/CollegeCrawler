@@ -8,6 +8,7 @@ import shuxian.crawler.university.model.collegeinfo.EnrollNum;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @Service
 public class EnrollNumServiceImpl extends ServiceImpl<EnrollNumMapper, EnrollNum> implements EnrollNumService {

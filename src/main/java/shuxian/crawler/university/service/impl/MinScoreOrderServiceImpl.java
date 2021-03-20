@@ -8,6 +8,7 @@ import shuxian.crawler.university.model.collegeinfo.MinScoreOrder;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @Service
 public class MinScoreOrderServiceImpl extends ServiceImpl<MinScoreOrderMapper, MinScoreOrder> implements MinScoreOrderService {

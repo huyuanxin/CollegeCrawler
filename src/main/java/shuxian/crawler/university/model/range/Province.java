@@ -4,6 +4,7 @@ package shuxian.crawler.university.model.range;
  * 省份
  *
  * @author huyuanxin
+ * @author guoshuxian
  */
 public enum Province {
     /**

@@ -1,9 +1,8 @@
 package shuxian.crawler.university.model.range;
 
 /**
- * 文理科
- *
  * @author huyuanxin
+ * @author guoshuxian
  */
 public enum Curriculum {
 

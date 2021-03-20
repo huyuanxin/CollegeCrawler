@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @Component
 public class CrawlerUtil {

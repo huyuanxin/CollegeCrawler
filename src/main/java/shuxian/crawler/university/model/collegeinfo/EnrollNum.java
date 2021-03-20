@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @TableName("enrollnum")
 public class EnrollNum {

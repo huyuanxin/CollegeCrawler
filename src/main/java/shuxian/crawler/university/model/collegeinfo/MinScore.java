@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @TableName("min_score")
 public class MinScore {

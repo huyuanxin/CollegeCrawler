@@ -5,6 +5,7 @@ import shuxian.crawler.university.model.collegeinfo.EnrollNum;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 public interface EnrollNumService extends IService<EnrollNum> {
 }

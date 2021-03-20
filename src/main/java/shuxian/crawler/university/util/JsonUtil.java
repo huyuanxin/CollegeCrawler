@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 public class JsonUtil {
     public static boolean createJsonFile(JSONObject json, String fileName) {

@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 public class CollegeNameCrawlerUtil {
 

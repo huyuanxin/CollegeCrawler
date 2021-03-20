@@ -1,9 +1,8 @@
 package shuxian.crawler.university.model.range;
 
 /**
- * 批次
- *
  * @author huyuanxin
+ * @author guoshuxian
  */
 public enum Batch {
 

@@ -2,6 +2,7 @@ package shuxian.crawler.university.model;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 public class College {
 

@@ -7,6 +7,7 @@ import shuxian.crawler.university.model.collegeinfo.MinScore;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @Repository
 @Mapper

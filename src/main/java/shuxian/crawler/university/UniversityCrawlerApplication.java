@@ -9,6 +9,7 @@ import javax.annotation.PostConstruct;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 @SpringBootApplication
 public class UniversityCrawlerApplication {

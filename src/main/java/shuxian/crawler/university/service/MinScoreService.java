@@ -5,6 +5,7 @@ import shuxian.crawler.university.model.collegeinfo.MinScore;
 
 /**
  * @author huyuanxin
+ * @author guoshuxian
  */
 public interface MinScoreService extends IService<MinScore> {
 
