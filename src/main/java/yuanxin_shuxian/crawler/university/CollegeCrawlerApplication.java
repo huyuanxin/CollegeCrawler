@@ -12,13 +12,13 @@ import javax.annotation.PostConstruct;
  * @author guoshuxian
  */
 @SpringBootApplication
-public class UniversityCrawlerApplication {
+public class CollegeCrawlerApplication {
 
     final CrawlerUtil crawlerUtil;
     static CrawlerUtil staticCrawlerUtil = null;
 
     @Autowired
-    public UniversityCrawlerApplication(CrawlerUtil crawlerUtil) {
+    public CollegeCrawlerApplication(CrawlerUtil crawlerUtil) {
         this.crawlerUtil = crawlerUtil;
     }
 
@@ -28,7 +28,7 @@ public class UniversityCrawlerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(UniversityCrawlerApplication.class, args);
+        SpringApplication.run(CollegeCrawlerApplication.class, args);
         staticCrawlerUtil.saveCollegeInfo();
     }
 }

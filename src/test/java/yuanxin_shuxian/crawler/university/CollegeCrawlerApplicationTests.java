@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @SpringBootTest
-class UniversityCrawlerApplicationTests {
+class CollegeCrawlerApplicationTests {
 
     @Autowired
     CrawlerUtil crawlerUtil;
