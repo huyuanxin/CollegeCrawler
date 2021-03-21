@@ -101,7 +101,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>shuxian.crawler.university.UniversityCrawlerApplication</mainClass>
+                    <mainClass>UniversityCrawlerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
