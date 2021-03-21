@@ -16,7 +16,7 @@ CollegeCrawler
 ### DownLoad Source Code
 
 ```shell
-git clonehttps://gitee.com/huyuanxin/CollegeCrawler
+git clone https://gitee.com/huyuanxin/CollegeCrawler
 ```
 
 ### Import Code To IDEA
