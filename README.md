@@ -1,6 +1,6 @@
 # README
 
-大学信息爬虫软件
+CollegeCrawler
 
 # Quick Start
 
