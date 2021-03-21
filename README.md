@@ -41,10 +41,10 @@ spring.datasource.password={password}
 
 # References
 
-如果你在研究中使用了CollegeCrawler，请按如下格式引用：
+If you used College Crawler in your research, please quote it in the following format:
 
 ```
-@software{CollegeCrawler,
+@Software{CollegeCrawler,
   author = {huyuanxin},
   title = {{CollegeCrawler: CollegeCrawler}},
   year = {2021},
@@ -52,3 +52,9 @@ spring.datasource.password={password}
 }
 ```
 
+# Disclaimers
+
+Please do not apply College Crawler to any work that may violate the legal provisions and moral constraints. Please use
+College Crawler friendly, abide by the spider agreement, and do not use College Crawler for any illegal purpose. If you
+choose to use College Crawler, you will abide by this agreement. The author will not bear any legal risks and losses
+caused by your violation of this agreement, and all consequences will be borne by you.
